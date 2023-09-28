@@ -1,0 +1,214 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Body text font */
+    background-color: #E6F7FF; /* Light Blue color */
+}
+
+/* Navigation Bar Styles */
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    padding: 1%;
+    background: linear-gradient(to right, #48C9B0, #5DADE2); /* Turquoise to Light Blue gradient */
+    color: #FFFFFF; /* White color for the text */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 5%;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-family: 'Titan One';
+}
+
+/* Intro Section Styles */
+#intro {
+    width: 100%;
+    padding: 8% 8% 2% 8%; /* Top, right, bottom, left */
+    background-color: #ABEBC6; /* Light Green color */
+    color: #21618C; /* Dark Blue color */
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Titan One'; /* Heading font */
+    font-weight: normal;
+}
+
+#intro p {
+    width: 100%;
+    padding: 0%;
+    background-color: #ABEBC6; /* Light Green color */
+    color: #21618C; /* Dark Blue color */
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Lobster', cursive; /* Heading font */
+    font-weight: normal;
+}
+
+/* Grid Container Styles */
+#grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    padding: 0%;
+}
+
+/* Grid Item Styles */
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    background-size: 140% auto;
+    background-position: center center;
+    padding-top: 100%;
+}
+
+.grid-item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(70, 71, 70, 0.284); /* Greenish-Blue with 50% opacity */
+    transition: all 0.5s;
+}
+
+.grid-item h2 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Individual Grid Items Background Images */
+#carnival {
+    background-image: url('carnival.jpg');
+}
+
+#family {
+    background-image: url('family.jpg');
+}
+
+#utah {
+    background-image: url('utah.jpg');
+}
+
+#birthday {
+    background-image: url('birthday.jpg');
+}
+
+/* Grid Item Hover Styles */
+.grid-item:hover::after {
+    background: rgba(102, 205, 170, 0); /* MediumAquamarine with 0% opacity */
+}
+
+.grid-item:hover h2 {
+    font-size: 2.5em;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #48C9B0; /* Turquoise color */
+    color: #21618C; /* Dark Blue color */
+    text-align: center;
+    padding: 1%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5vh; /* Set the height relative to the viewport height */
+    font-family: 'Titan One';
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Here is off canvas button design */
+
+
+.menu-button {
+    display: none; /* Show the button on smaller screens */
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hidden_nav {
+    display: none;
+}
+
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .menu-button {
+        display: flex; /* Show the button on smaller screens */
+        background: linear-gradient(to right, #48C9B0, #5DADE2);
+        color: white;
+        font-size: 1.5em;
+        font-family: 'Titan One';
+        font-weight: bold;
+        padding-top: 1.2%; /* Apply padding to the top */
+        padding-right: 2%; /* Apply padding to the right */
+        padding-bottom: 1.2%; /* Apply padding to the bottom */
+        padding-left: 3%; /* Apply padding to the left */
+    }
+    
+    .menu-toggle:checked + .hidden_nav {
+        opacity: 1;
+        pointer-events: auto;
+        display: flex;
+        background: linear-gradient(to right, #48C9B0, #5DADE2);
+        color: #FFFFFF;
+    }
+
+    .hidden_nav ul {
+        list-style-type: none;
+    }
+    
+    .hidden_nav ul li {
+        display: block;
+    }
+    
+    .hidden_nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 1em;
+        font-family: 'Titan One';
+        line-height: 1.5em;
+    }
+    
+
+    /* Adjust grid to 4 by 1 */
+    #grid-container {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 1fr);
+    }
+}

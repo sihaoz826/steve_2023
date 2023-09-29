@@ -9,6 +9,8 @@ body {
     background-color: #E6F7FF; /* Light Blue color */
 }
 
+/* Desktop View Styles */
+
 /* Navigation Bar Styles */
 nav {
     position: absolute;
@@ -145,20 +147,18 @@ footer {
     justify-content: center;
 }
 
+/* Tablet View Styles */
 
-
-
-/* Media query for screens smaller than 1366px (tablet view) */
-@media screen and (max-width: 1366px) {
+/* Media query for screens smaller than 1350px (tablet view) */
+@media screen and (max-width: 1350px) {
     nav {
-        width: 55%;
+        width: 60%;
     }
 }
 
+/* Mobile View Styles */
 
-
-/* Here is off canvas button design */
-
+/* Off-Canvas Button Design for Mobile View */
 .menu-button {
     display: none; /* Show the button on smaller screens */
 }
@@ -171,8 +171,8 @@ footer {
     display: none;
 }
 
-/* Media query for screens smaller than 768px (phone view) */
-@media screen and (max-width: 768px) {
+/* Media query for screens smaller than 840px (phone view) */
+@media screen and (max-width: 840px) {
     nav {
         display: none;
     }
@@ -215,11 +215,9 @@ footer {
     }
     
 
-    /* Adjust grid to 4 by 1 */
+    /* Adjust grid to 4 by 1 for mobile view */
     #grid-container {
         grid-template-columns: 100%;
         grid-template-rows: repeat(4, 1fr);
     }
 }
-
-

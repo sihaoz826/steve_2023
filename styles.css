@@ -18,15 +18,15 @@ body {
 
 /* Navigation Bar Styles */
 nav {
-    position: absolute;
-    top: 0;
     width: 100%;
-    background: linear-gradient(to right, #48C9B0, #5DADE2); /* Turquoise to Light Blue gradient */
-    color: #FFFFFF; /* White color for the text */
+    background: linear-gradient(to right, #48C9B0, #5DADE2);
+    color: #FFFFFF;
     display: flex;
-    justify-content: space-between; /* This will separate logo and nav links */
-    align-items: center; /* This will center them vertically */
-  }
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    z-index: 10000000000;
+}
   
   
 #logo-placeholder {

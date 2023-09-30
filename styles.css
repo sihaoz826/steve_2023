@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 /* General Styles */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif; /* Body text font */
@@ -15,20 +20,38 @@ body {
 nav {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 40%;
-    padding: 1%;
+    width: 100%;
     background: linear-gradient(to right, #48C9B0, #5DADE2); /* Turquoise to Light Blue gradient */
     color: #FFFFFF; /* White color for the text */
+    display: flex;
+    justify-content: space-between; /* This will separate logo and nav links */
+    align-items: center; /* This will center them vertically */
+  }
+  
+  
+#logo-placeholder {
+    margin: 0%, 0%, 0%, 2%; /* top, right, bottom, and left  */
+    flex-shrink: 0; /* This prevents the logo placeholder from shrinking */
+    align-items: center;
 }
 
+#logo-image {
+    max-width: 75px;
+    height: auto;
+}
+  
+  
 nav ul {
+    margin-right: 10%;  /* Added negative margin to move the link texts further to the left */
     list-style-type: none;
+    display: flex; /* This will display the links inline */
+    flex-shrink: 0; /* This prevents the ul from shrinking */
 }
-
+  
+  
 nav ul li {
-    display: inline;
-    margin: 0 5%;
+    margin-left: 9%; /* Adjust spacing between links */
+
 }
 
 nav a {
@@ -37,6 +60,7 @@ nav a {
     font-size: 1.2em;
     font-family: 'Titan One';
 }
+  
 
 /* Intro Section Styles */
 #intro {
@@ -145,15 +169,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* Tablet View Styles */
-
-/* Media query for screens smaller than 1350px (tablet view) */
-@media screen and (max-width: 1350px) {
-    nav {
-        width: 50%;
-    }
 }
 
 /* Mobile View Styles */

@@ -171,6 +171,11 @@ footer {
     justify-content: center;
 }
 
+
+/* Here there is not a tablet view because I think it is not necessary for 
+the tablet view to be the same as the desktop view given the amount of 
+information in the website */
+
 /* Mobile View Styles */
 
 /* Off-Canvas Button Design for Mobile View */

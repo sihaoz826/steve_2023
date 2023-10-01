@@ -242,8 +242,8 @@ footer {
     
     .hidden_nav ul li {
         display: flex;
-        align-items: center; /* vertically center content inside the button */
-        justify-content: center; /* horizontally center content inside the button */
+        position: relative; /* This is necessary for the 'left' property to take effect */
+        left: -5%;  /* Shifts the ul 10 pixels to the left */
     }
     
     .hidden_nav a {

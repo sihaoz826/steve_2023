@@ -129,19 +129,19 @@ nav a {
 
 /* Individual Grid Items Background Images */
 #carnival {
-    background-image: url('carnival.jpg');
+    background-image: url('../image/carnival.jpg');
 }
 
 #family {
-    background-image: url('family.jpg');
+    background-image: url('../image/family.jpg');
 }
 
 #utah {
-    background-image: url('utah.jpg');
+    background-image: url('../image/utah.jpg');
 }
 
 #birthday {
-    background-image: url('birthday.jpg');
+    background-image: url('../image/birthday.jpg');
 }
 
 /* Grid Item Hover Styles */

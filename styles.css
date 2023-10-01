@@ -24,7 +24,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; 
+    position: absolute; 
     z-index: 10000000000;
 }
   
@@ -42,7 +42,7 @@ nav {
   
   
 nav ul {
-    margin-right: 10%;  /* Added negative margin to move the link texts further to the left */
+    margin-right: 14%;  /* Added negative margin to move the link texts further to the left */
     list-style-type: none;
     display: flex; /* This will display the links inline */
     flex-shrink: 0; /* This prevents the ul from shrinking */
@@ -50,7 +50,7 @@ nav ul {
   
   
 nav ul li {
-    margin-left: 9%; /* Adjust spacing between links */
+    margin-left: 10%; /* Adjust spacing between links */
 
 }
 
@@ -174,7 +174,7 @@ footer {
 /* Mobile View Styles */
 
 /* Off-Canvas Button Design for Mobile View */
-.menu-button {
+#mobile_logo-placeholder {
     display: none; /* Show the button on smaller screens */
 }
 
@@ -192,43 +192,66 @@ footer {
         display: none;
     }
 
-    .menu-button {
+    #mobile_logo-placeholder {
         display: flex; /* Show the button on smaller screens */
         background: linear-gradient(to right, #48C9B0, #5DADE2);
         color: white;
         font-size: 1.5em;
         font-family: 'Titan One';
         font-weight: bold;
-        padding-top: 1.2%; /* Apply padding to the top */
-        padding-right: 2%; /* Apply padding to the right */
-        padding-bottom: 1.2%; /* Apply padding to the bottom */
-        padding-left: 3%; /* Apply padding to the left */
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-button {
+        display: flex;
+        padding: 0% 3% 0% 70%; /* Top, right, bottom, left */
+        align-items: center; /* vertically center content inside the button */
+        justify-content: center; /* horizontally center content inside the button */
+    }
+
+    #mobile_logo-image {
+        max-width: 40px;
+        height: auto;
+        padding: 0% 0% 0% 0%; /* Top, right, bottom, left */
+    }
+
+    .hidden_nav {
+        position: absolute; /* Added this line */
+        top: 100%; /* Added this line: start the nav right below the container */
+        width: 100%; /* Added this line: make it span the entire width of the container */
+        height: 5vh ;  /* Set the desired height */
+        overflow-y: auto;  /* Make it scrollable vertically */
     }
     
-    .menu-toggle:checked + .hidden_nav {
+    #menu-toggle:checked + .hidden_nav {
+        display: flex;
         opacity: 1;
         pointer-events: auto;
-        display: flex;
+        height: auto;
         background: linear-gradient(to right, #48C9B0, #5DADE2);
         color: #FFFFFF;
     }
-
+      
     .hidden_nav ul {
         list-style-type: none;
     }
     
     .hidden_nav ul li {
-        display: block;
+        display: flex;
+        align-items: center; /* vertically center content inside the button */
+        justify-content: center; /* horizontally center content inside the button */
     }
     
     .hidden_nav a {
         text-decoration: none;
         color: white;
-        font-size: 1em;
+        font-size: 0.6em;
         font-family: 'Titan One';
-        line-height: 1.5em;
     }
-    
 
     /* Adjust grid to 4 by 1 for mobile view */
     #grid-container {

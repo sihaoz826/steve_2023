@@ -237,19 +237,22 @@ footer {
     }
       
     .hidden_nav ul {
-        list-style-type: none;
+        display: block;
+        justify-content: center; /* This will center the li items horizontally */
+        justify-content: center;
+        list-style-type: none;   /* This will remove bullet points from the list */
+        line-height: 3vh;
     }
     
     .hidden_nav ul li {
-        display: flex;
-        position: relative; /* This is necessary for the 'left' property to take effect */
-        left: -5%;  /* Shifts the ul 10 pixels to the left */
-    }
+        display: flex;           /* This will make each li a flex container, but it's not necessary unless you have additional content inside each li that you want to style using flexbox */
+        position: static;        /* This is the default value, so you can also just omit this line */
+    }    
     
     .hidden_nav a {
         text-decoration: none;
         color: white;
-        font-size: 0.6em;
+        font-size: 0.7em;
         font-family: 'Titan One';
     }
 
